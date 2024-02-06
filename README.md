@@ -38,13 +38,33 @@ SCAN cursor [COUNT count]
 SELECT [DATABASE ID]
 SCAN cursor COUNT count *MATCH pattern*
 
-4. Delete specific Cache key:
+3. Delete specific Cache key:
 DEL {cache full key name with double quotes}
 
-6. Delete all Cache values from a Single floor:
+4. Delete all Cache values from a Single floor:
 SELECT [DATABASE ID]
 FLUSHDB
 
-7. Delete all Cache values from all associated floors:
+5. Delete all Cache values from all associated floors:
 FLUSHALL
 (Please be careful while executing this as this will clear cache from all associated floors.)
+<br><br>
+
+**Detailed Explanation Below:**
+<br><br>
+
+FETCH ALL CACHE VALUES FOR A PARTICULAR FLOOR: <br> <br>
+SELECT 1 <br>
+SCAN 0 COUNT 1000 <br> 
+Here server returns an updated cursor 366 that the user needs to use as the cursor argument in the next call. If the required key is not found keep the command running with next cursor value until the value reaches 0. <br> <br>
+SCAN 366 COUNT 1000 <br> <br>
+The above will fetch the next set of keys and so on.
+
+NOTE: The cursor value "366" in the SCAN response does not indicate the total number of cache key entries. The cursor value is specific to the
+SCAN operation and represents the current position in the iteration of keys, but it does not reflect the total count of keys. <br><br>
+
+<img width="410" alt="image" src="https://github.com/iamsthita/Azure-Cache-for-Redis/assets/132139960/816db1da-b027-4ef8-b424-6ea771e4e15f">
+
+
+
+
