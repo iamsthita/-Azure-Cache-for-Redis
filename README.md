@@ -1,4 +1,4 @@
-# Redis Cache Commands
+# Redis Cache Commands:
 
 An Overview of Common Redis Cache Commands and Their Usages:
 
@@ -20,4 +20,7 @@ An Overview of Common Redis Cache Commands and Their Usages:
 
 **INFO:** Retrieves various information about the Redis server, including memory usage, clients, and more.
 
-Navigate to Azure Cache for Redis, select the required Redis application, go to the Overview pane, and click on 'Console
+
+Navigate to Azure Cache for Redis, select the required Redis application, go to the Overview pane, and click on 'Console.
+
+<img width="427" alt="image" src="https://github.com/iamsthita/Azure-Cache-for-Redis/assets/132139960/59a13084-c25c-49e0-a55c-4d2e63733754">
